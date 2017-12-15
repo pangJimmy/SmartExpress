@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editText_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint=" 请输入单号" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="查询" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_result"
+        style="@style/NormalContentFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+
+            <LinearLayout
+                android:id="@+id/layout_o_codeNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="快递单号" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_codeNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="当前订单状态" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_lName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="揽件人" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_lName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_lTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="揽件时间" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_lTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_zName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="中转站入库操作人" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_zName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_zLocaltion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="中转站存放位置" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_zLocaltion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_zTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="中转站入库时间" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_zTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_carNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="运输车编号" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_carNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_carTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="运输时间" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_carTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_pName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="配送站入库操作人" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_pName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_pLocaltion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="配送站存放位置" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_pLocaltion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_pTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="配送站入库时间" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_pTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_kName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="配送员" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_kName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_ksTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="配送时间" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_ksTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_qName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="签收人" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_qName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            <LinearLayout
+                android:id="@+id/layout_o_qTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:minHeight="25dp"
+                    android:gravity="right|center_vertical"
+                    android:background="@color/list_light"
+                    android:padding="3dp"
+                    android:text="签收时间" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/list_dark" />
+
+                <TextView
+                    android:id="@+id/textView_o_qTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dp"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/list_dark" />
+            
+        </LinearLayout>
+                    
+            
+            
+    </ScrollView>
+
+</LinearLayout>

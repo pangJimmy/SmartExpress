@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_getpackage"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_getpackage"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="单号：" />
+
+                <EditText
+                    android:id="@+id/editText_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_getpackage"
+                    android:layout_alignBottom="@+id/textView_getpackage"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_getpackage"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:inputType="number"
+                    android:minHeight="30dp"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_goods_name"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_goods_name"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="物品名称：" />
+
+                <EditText
+                    android:id="@+id/editText_goods_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_goods_name"
+                    android:layout_alignBottom="@+id/textView_goods_name"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_goods_name"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_goods_count"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_goods_count"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:inputType="number"
+                    android:text="物品数量：" />
+
+                <EditText
+                    android:id="@+id/editText_goods_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_goods_count"
+                    android:layout_alignBottom="@+id/textView_goods_count"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_goods_count"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:inputType="number"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_send_person"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_send_person"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="寄件人：" />
+
+                <EditText
+                    android:id="@+id/editText_send_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_send_person"
+                    android:layout_alignBottom="@+id/textView_send_person"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_send_person"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_send_person_tel"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_send_person_tel"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="寄件人电话：" />
+
+                <EditText
+                    android:id="@+id/editText_send_person_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_send_person_tel"
+                    android:layout_alignBottom="@+id/textView_send_person_tel"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_send_person_tel"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:inputType="number"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_send_person_addr"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_send_person_addr"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="寄件人地址：" />
+
+                <EditText
+                    android:id="@+id/editText_send_person_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_send_person_addr"
+                    android:layout_alignBottom="@+id/textView_send_person_addr"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_send_person_addr"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_wendu"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_wendu"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="存储温度：" />
+
+                <EditText
+                    android:id="@+id/editText_wendu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_wendu"
+                    android:layout_alignBottom="@+id/textView_wendu"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_wendu"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:inputType="number"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_getpackage_person"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_getpackage_person"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="收件人：" />
+
+                <EditText
+                    android:id="@+id/editText_getpackage_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_getpackage_person"
+                    android:layout_alignBottom="@+id/textView_getpackage_person"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_getpackage_person"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_getpackage_person_tel"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_getpackage_person_tel"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="收件人电话：" />
+
+                <EditText
+                    android:id="@+id/editText_getpackage_person_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_getpackage_person_tel"
+                    android:layout_alignBottom="@+id/textView_getpackage_person_tel"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_getpackage_person_tel"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:inputType="number"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_getpackage_person_addr"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_getpackage_person_addr"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="收件人地址：" />
+
+                <EditText
+                    android:id="@+id/editText_getpackage_person_addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView_getpackage_person_addr"
+                    android:layout_alignBottom="@+id/textView_getpackage_person_addr"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_getpackage_person_addr"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/NormalContentFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:inputType="number"
+                    android:text="运费支付：" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_month_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="月付" />
+
+                    <RadioButton
+                        android:id="@+id/radio_geter_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="到付" />
+
+                    <RadioButton
+                        android:id="@+id/radio_poster_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="寄付" />
+                </RadioGroup>
+            </LinearLayout>
+                        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/textView_payment"
+                    android:background="@color/list_light" />
+
+                <TextView
+                    android:id="@+id/textView_payment"
+                    style="@style/NormalContentFont"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical|left"
+                    android:minHeight="40dp"
+                    android:text="运费（元）：" />
+
+                <EditText
+                    android:id="@+id/editText_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_alignBaseline="@+id/textView_payment"
+                    android:layout_alignBottom="@+id/textView_payment"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/textView_payment"
+                    android:background="@color/white"
+                    android:ems="16"
+                    android:minHeight="30dp"
+                    android:singleLine="true" >
+                </EditText>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="提交" />
+
+</LinearLayout>

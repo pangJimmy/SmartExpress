@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 标题颜色，亮蓝色 -->
+    <color name="title_color">#00b7ee</color>
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+        <!-- 主背景颜色,大红色 -->
+    <color name="red_main_bg">#ee2525</color>
+    <!-- 按钮字体颜色 -->
+    <color name="btn_font_bg">#00479d</color>
+    <!-- 5182bb -->
+    <color name="btn_listview_title">#5182bb</color>
+    <!-- listview中深颜色 -->
+    <color name="list_dark">#cfd8e7</color>
+    <!-- listview中浅颜色 -->
+    <color name="list_light">#e9ecf3</color>
+    
+    <!-- 浅黄颜色 -->
+    <color name="light_orange">#e6c192</color>
+    <!-- 浅绿色 -->
+    <color name="light_green">#92e6c0</color>
+</resources>

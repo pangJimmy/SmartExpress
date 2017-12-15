@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+        <include layout="@layout/title_normal" />
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/textView_getpackage"
+                android:background="@color/list_light" />
+
+            <TextView
+                android:id="@+id/textView_getpackage"
+                style="@style/NormalContentFont"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="14dp"
+                android:gravity="center_vertical|left"
+                android:minHeight="40dp"
+                android:text="服务器IP：" />
+
+            <EditText
+                android:id="@+id/editText_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView_getpackage"
+                android:layout_alignBottom="@+id/textView_getpackage"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/textView_getpackage"
+                android:background="@color/white"
+                android:ems="16"
+                android:text="123.56.138.171"
+                android:minHeight="30dp" >
+
+            </EditText>
+            
+
+        </RelativeLayout>
+        
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/textView_qs_person"
+                android:background="@color/list_light" />
+
+            <TextView
+                android:id="@+id/textView_qs_person"
+                style="@style/NormalContentFont"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="14dp"
+                android:gravity="center_vertical|left"
+                android:minHeight="40dp"
+                android:text="端口：" />
+
+            <EditText
+                android:id="@+id/edit_port"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView_qs_person"
+                android:layout_alignBottom="@+id/textView_qs_person"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/textView_qs_person"
+                android:background="@color/white"
+                android:ems="16"
+                android:text="2001"
+                android:inputType="number"
+                android:minHeight="30dp" >
+
+            </EditText>
+            
+
+        </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_save_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="保存设置" />
+
+</LinearLayout>
